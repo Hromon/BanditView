@@ -1,0 +1,318 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://a1d0291de88c5151.png" type="Texture" id=1]
+[ext_resource path="res://bg.jpg" type="Texture" id=2]
+[ext_resource path="res://Lamp.tres" type="Material" id=3]
+[ext_resource path="res://13.png" type="Texture" id=4]
+[ext_resource path="res://NormalRollMat.tres" type="Material" id=5]
+[ext_resource path="res://Main.cs" type="Script" id=6]
+[ext_resource path="res://Rubik-Black.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://1_23.png" type="Texture" id=8]
+[ext_resource path="res://1_22.png" type="Texture" id=9]
+[ext_resource path="res://1_24.png" type="Texture" id=10]
+
+[sub_resource type="SpatialMaterial" id=1]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="CylinderMesh" id=2]
+
+[sub_resource type="CylinderMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="QuadMesh" id=5]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_texture = ExtResource( 2 )
+uv1_scale = Vector3( 1.14, 0.822, 1 )
+uv1_offset = Vector3( 0.5, 0.55, 0 )
+uv1_triplanar = true
+
+[sub_resource type="SphereMesh" id=7]
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+use_filter = true
+font_data = ExtResource( 7 )
+
+[node name="Main" type="Node"]
+script = ExtResource( 6 )
+
+[node name="Rolls" type="Spatial" parent="."]
+
+[node name="Roll" type="MeshInstance" parent="Rolls"]
+transform = Transform( 1.69, 0, 0, 0, -4.07302e-07, -1.69, 0, 2.5, -2.75336e-07, -0.887, 0, 0 )
+material_override = SubResource( 1 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="PivotRoll1" type="Spatial" parent="Rolls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.887, 0, 1.58 )
+
+[node name="Roll1" type="MeshInstance" parent="Rolls/PivotRoll1"]
+transform = Transform( 1.7, 0, 0, 0, -3.0598e-08, -1.7, 0, 0.7, -7.43094e-08, 0, 0, 0 )
+material_override = ExtResource( 5 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="PivotRoll2" type="Spatial" parent="Rolls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.887, 0, 0 )
+
+[node name="Roll2" type="MeshInstance" parent="Rolls/PivotRoll2"]
+transform = Transform( 1.7, 0, 0, 0, -1.14044e-07, -1.7, 0, 0.7, -2.76965e-07, 0, 0, 0 )
+material_override = ExtResource( 5 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="PivotRoll3" type="Spatial" parent="Rolls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.887, 0, -1.58 )
+
+[node name="Roll3" type="MeshInstance" parent="Rolls/PivotRoll3"]
+transform = Transform( 1.7, 0, 0, 0, -3.0598e-08, -1.7, 0, 0.7, -7.43094e-08, 0, 0, 0 )
+material_override = ExtResource( 5 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="RollBackground" type="MeshInstance" parent="."]
+transform = Transform( -1.14044e-06, 0, 1, 0, 4.4, 0, -7, 0, -1.62921e-07, 0, 0, 0 )
+material_override = SubResource( 4 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Background" type="MeshInstance" parent="."]
+transform = Transform( -2.53472e-06, 0, 1, 0, 8.757, 0, -15.558, 0, -1.62921e-07, -0.0495446, 0, 0 )
+material_override = SubResource( 6 )
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 5.9462, 0, 0 )
+size = 10.0
+
+[node name="LampModel" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.128317, 0, 0 )
+
+[node name="Lamp" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.90186, 0 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp2" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.90186, 2.13145 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp3" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.64717, 4.1082 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp4" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.0312059, 4.23504 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp5" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -2.57039, 4.08919 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp6" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -2.86747, 2.11108 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp7" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -2.84287, -0.0138955 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp8" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -2.84287, -2.20397 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp9" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -2.49823, -4.1408 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp10" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.00490594, -4.29794 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp11" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.61195, -4.14205 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="Lamp12" type="MeshInstance" parent="LampModel"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.91952, -2.14078 )
+material_override = ExtResource( 3 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="LampLight" type="Spatial" parent="."]
+
+[node name="OmniLight" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.562113, 2.84976, 0.0564575 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight2" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.562113, 2.90082, 2.05198 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight3" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.760714, 2.70665, 3.99314 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight4" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.562113, 0.17183, 4.1388 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight5" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567419, -2.33861, 4.00371 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight6" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567419, -2.75215, 2.0738 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight7" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567419, -2.75215, 0.026267 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight8" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567419, -2.75215, -2.18343 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight9" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567419, -2.21783, -4.08619 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight10" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567419, 0.210541, -4.22518 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight11" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567419, 2.6311, -4.12093 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="OmniLight12" type="OmniLight" parent="LampLight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567419, 2.87051, -2.15718 )
+light_color = Color( 1, 0.572549, 0.027451, 1 )
+light_energy = 0.94
+omni_range = 4.8
+
+[node name="GUI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="GUI"]
+anchor_left = 0.000841528
+anchor_top = 0.864513
+anchor_right = 0.157092
+anchor_bottom = 0.997846
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="GUI"]
+anchor_left = 0.160156
+anchor_top = 0.878333
+anchor_right = 0.327148
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 8 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="5" type="Button" parent="GUI"]
+anchor_left = 0.90625
+anchor_top = 0.846667
+anchor_right = 0.999023
+anchor_bottom = 1.005
+margin_top = -3.05176e-05
+icon = ExtResource( 9 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="10" type="Button" parent="GUI"]
+anchor_left = 0.814453
+anchor_top = 0.846667
+anchor_right = 0.907227
+anchor_bottom = 1.005
+margin_top = -3.05176e-05
+icon = ExtResource( 8 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="100" type="Button" parent="GUI"]
+anchor_left = 0.723633
+anchor_top = 0.846667
+anchor_right = 0.816406
+anchor_bottom = 1.005
+margin_top = -3.05176e-05
+icon = ExtResource( 10 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 9.99668, 0.0749602, 0 )
+light_color = Color( 1, 0.423529, 0, 1 )
+light_energy = 3.51
+spot_range = 15.0325
+spot_angle = 25.1188
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

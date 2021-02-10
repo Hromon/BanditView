@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandit", "Bandit.csproj", "{BAF32C95-9333-4D1F-B932-0C3520C5311B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAF32C95-9333-4D1F-B932-0C3520C5311B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF32C95-9333-4D1F-B932-0C3520C5311B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF32C95-9333-4D1F-B932-0C3520C5311B}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{BAF32C95-9333-4D1F-B932-0C3520C5311B}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{BAF32C95-9333-4D1F-B932-0C3520C5311B}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{BAF32C95-9333-4D1F-B932-0C3520C5311B}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

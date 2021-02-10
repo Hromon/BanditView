@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ruchka_1.wav-c9e3da96d97b59fbbf245aedc06e03f7.sample"
+
+[deps]
+
+source_file="res://ruchka_1.wav"
+dest_files=[ "res://.import/ruchka_1.wav-c9e3da96d97b59fbbf245aedc06e03f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
