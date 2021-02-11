@@ -4,7 +4,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EGL">
-      <HintPath>C:\Users\Ellizium\Desktop\EGL-main\bin\Release\EGL.dll</HintPath>
+      <HintPath>libs\EGL.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
